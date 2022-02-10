@@ -25,7 +25,7 @@ axios.interceptors.request.use((request) => requestHandler(request));
 
 axios.interceptors.response.use(
     (response) => successResponseHandler(response),
-    (error) => errorResponseHandler(response)
+    (error) => errorResponseHandler(error)
 );
 
-export default axiosInstance;
+export default axios;
