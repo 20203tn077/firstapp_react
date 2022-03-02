@@ -14,7 +14,7 @@ const requestHandler = (request) => {
 };
 
 const errorResponseHandler = (response) => {
-    return new Promise().reject({...response});
+    return Promise().reject({ ...response });
 };
 
 const successResponseHandler = (response) => {
