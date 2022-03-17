@@ -16,7 +16,7 @@ export const CategoryList = () => {
     const [categories, setCategories] = useState([]);
     let asd;
     const getCategories = () => {
-        /*axios.get(/category/)
+            /*axios.get('/category/')
             .then(response => {
                 setCategories(response.data);
                 setIsLoading(false);

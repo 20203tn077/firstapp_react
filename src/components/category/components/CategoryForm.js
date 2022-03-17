@@ -8,6 +8,12 @@ import Alert from '../../../shared/plugins/alert';
 
 
 export const CategoryForm = (props) => {
+    const titleConfirmacion = "¿Estás seguro?";
+    const msjConfirmacion = "";
+    const titleError = "";
+    const msjError = "";
+    const titleExito = "";
+    const msjExito = "";
     const formik = useFormik({
         initialValues: {
             description: "",
@@ -79,10 +85,9 @@ export const CategoryForm = (props) => {
     const handleClose = () => {
         onClose();
         formik.resetForm();
-        //resetear el formulario
     }
     return (
-        <Modal show={isOpen} >
+        <Modal show={isOpen} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Registrar categoría</Modal.Title>
             </Modal.Header>
